@@ -211,7 +211,7 @@ for batch_ind, batch in enumerate(val1):
     image, label = batch
     for i in range(label.shape[0]):
         if label[i] in take_labels:
-            dog_images.append(image[i:i+1])
+            dog_images.append(xf[i:i+1])
             dog_labels.append(label[i:i+1])
 
     if len(dog_images) == BATCH_SIZE:
